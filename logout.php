@@ -1,0 +1,14 @@
+<?php
+    require_once("connection.php");
+    if(isset($_SESSION['email'])){
+        unset($_SESSION['email']);
+        unset($_SESSION['name']);
+        session_destroy();
+        $msg=urlencode(base64_encode('loggedOut'));
+        header('location:login.php?action='.$msg);
+    }
+    else{
+        $msg=urlencode(base64_encode('notLogin'));
+        header('location:login.php?action='.$msg);
+    }
+?>
