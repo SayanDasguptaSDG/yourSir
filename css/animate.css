@@ -1,0 +1,19 @@
+@keyframes showInline{
+    from{
+        display: none;
+        opacity: 0;
+    }
+    to{
+        display: inline-block;
+        opacity: 1;
+        
+    }
+}
+@keyframes slidedown{
+	from{
+		max-height:0px;
+	}
+	to{
+		max-height: 30px;
+	}
+}
